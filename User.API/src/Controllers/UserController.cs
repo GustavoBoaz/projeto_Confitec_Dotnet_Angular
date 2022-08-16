@@ -16,10 +16,10 @@ namespace User.API.src.Controllers
     public class UserController : ControllerBase
     {
         /// <summary>
-        /// Criar novo Usuario
+        /// Criar novo usuario
         /// </summary>
         /// <param name="handler"></param>
-        /// <param name="request">Dados do Usuario</param>
+        /// <param name="request">Dados do usuario</param>
         /// <returns>ActionResult</returns>
         /// <remarks>
         /// Exemplo de requisição:
@@ -34,7 +34,7 @@ namespace User.API.src.Controllers
         ///     }
         ///
         /// </remarks>
-        /// <response code="200">Usuario Criado</response>
+        /// <response code="200">Usuario criado</response>
         /// <response code="400">Erro na requisição</response>
         /// <response code="500">Erro no servidor</response>
         [HttpPost]
@@ -51,7 +51,7 @@ namespace User.API.src.Controllers
         }
 
         /// <summary>
-        /// Pegar tema pelo Id
+        /// Pegar usuario pelo Id
         /// </summary>
         /// <param name="handler"></param>
         /// <param name="id">Id do usuario</param>
@@ -72,10 +72,10 @@ namespace User.API.src.Controllers
         }
 
         /// <summary>
-        /// Atualizar um Usuario
+        /// Atualizar um usuario
         /// </summary>
         /// <param name="handler"></param>
-        /// <param name="request">Dados do Usuario</param>
+        /// <param name="request">Dados do usuario</param>
         /// <returns>ActionResult</returns>
         /// <remarks>
         /// Exemplo de requisição:
@@ -91,7 +91,7 @@ namespace User.API.src.Controllers
         ///     }
         ///
         /// </remarks>
-        /// <response code="200">Usuario Alterado</response>
+        /// <response code="200">Usuario alterado</response>
         /// <response code="400">Erro na requisição</response>
         /// <response code="500">Erro no servidor</response>
         [HttpPut]
@@ -108,7 +108,7 @@ namespace User.API.src.Controllers
         }
 
         /// <summary>
-        /// Deletar usuario pelo Id
+        /// Deletar usuario pelo id
         /// </summary>
         /// <param name="handler"></param>
         /// <param name="id">Id do usuario</param>
@@ -129,7 +129,7 @@ namespace User.API.src.Controllers
         }
 
         /// <summary>
-        /// Pegar todos temas
+        /// Pegar todos usuarios
         /// </summary>
         /// <returns>ActionResult</returns>
         /// <response code="200">Lista de usuarios</response>
