@@ -1,28 +1,4 @@
-﻿<h1 id="tableLabel">Confitec: Simples API de Usuario</h1>
-
-<p>Este componente esta demostrando CRUD de Usuario</p>
-
-<p *ngIf="!users"><em>Loading... </em></p>
-
-<table *ngIf="users">
-    <thead>
-        <tr>
-            <th>Nome</th>
-            <th>Sobrenome</th>
-            <th>Email</th>
-            <th>Data de Nascimento</th>
-            <th>Escolaridade</th>
-            <th>Id</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor="let user of users">
-            <td>{{ user.nome }}</td>
-            <td>{{ user.sobrenome }}</td>
-            <td>{{ user.email }}</td>
-            <td>{{ user.dataNacimento }}</td>
-            <td>{{ user.escolaridade }}</td>
-            <td>{{ user.id }}</td>
-        </tr>
-    </tbody>
-</table>
+﻿<div class="container">
+    <app-users></app-users>
+</div>
+<app-footer></app-footer>

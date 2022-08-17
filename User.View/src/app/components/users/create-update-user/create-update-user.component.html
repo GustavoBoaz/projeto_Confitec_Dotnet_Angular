@@ -1,0 +1,64 @@
+<form [formGroup]="form" (ngSubmit)="sendUser()">
+
+    <label for="nome">Nome</label>
+    <div class="form-group">
+        <div class="input-group">
+            <input type="text" class="form-control" name="nome" id="nome" placeholder="Gustavo Boaz"
+                formControlName="nome">
+        </div>
+    </div>
+
+    <br>
+
+    <label for="sobrenome">Sobrenome</label>
+    <div class="form-group">
+        <div class="input-group">
+            <input type="text" class="form-control" name="sobrenome" id="sobrenome" placeholder="De Moura Souza"
+                formControlName="sobrenome">
+        </div>
+    </div>
+
+    <br>
+
+    <label for="email">E-mail</label>
+    <div class="form-group">
+        <div class="input-group">
+            <input type="email" class="form-control" name="email" id="email" placeholder="gustavo@dominio.com"
+                formControlName="email">
+        </div>
+    </div>
+
+    <br>
+
+    <label for="data">Nascimento</label>
+    <div class="form-group">
+        <div class="input-group">
+            <input type="datetime-local" class="form-control" name="data" id="data" placeholder="Data de nacimento"
+                formControlName="dataNascimento">
+        </div>
+    </div>
+
+    <br>
+
+    <label for="">Escolaridade</label>
+    <div class="form-group">
+
+        <div class="input-group mb-3">
+            <label class="input-group-text" for="inputGroupSelect01">Opções</label>
+            <select class="form-select" id="inputGroupSelect01" formControlName="escolaridade">
+                <option value="Infantil">Infantil</option>
+                <option value="Fundamental">Fundamental</option>
+                <option value="Médio">Médio</option>
+                <option value="Superior">Superior</option>
+            </select>
+        </div>
+
+    </div>
+
+    <br>
+
+    <div class="form-group">
+        <button class="btn btn-success btn-lg btn-block" type="submit" [disabled]="form.invalid">Confirmar</button>
+    </div>
+
+</form>
