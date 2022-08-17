@@ -45,9 +45,10 @@ namespace User.API
             services.AddTransient<IUserCommands, UserCommandsHandlers>();
             services.AddTransient<IUserQueries, UserQueriesHandlers>();
 
+            services.AddCors();
             services.AddControllers();
 
-                        // Configuração Swagger
+            // Configuração Swagger
             services.AddSwaggerGen(s =>
             {
                 s.SwaggerDoc("v1", new OpenApiInfo { Title = "ApiUser", Version = "v1" });
@@ -76,6 +77,12 @@ namespace User.API
             context.Database.EnsureCreated();
 
             app.UseRouting();
+
+            app.UseCors(c => c
+                .AllowAnyOrigin()
+                .AllowAnyMethod()
+                .AllowAnyHeader()
+            );
 
             app.UseSwagger();
             app.UseSwaggerUI(c => {

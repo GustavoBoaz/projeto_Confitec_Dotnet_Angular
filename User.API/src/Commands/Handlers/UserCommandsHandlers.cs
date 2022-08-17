@@ -56,14 +56,12 @@ namespace User.API.src.Commands.Handlers
 
         public async Task<SussessResponse> HandlerAsync(UpdateUserRequest command)
         {
-            var user = await _repository.ReadAsync(command.Id);
-            if (user == null) throw new Exception("Id de usuario não existe");
-
             var aux = _validatorUpdate.Validate(command);
             if (!aux.IsValid) throw new Exception(MapAndSerializeJsonString(new Dictionary<string, string>()));
 
             await _repository.UpdateAsync(new UserEntity
             {
+                Id = command.Id,
                 Nome = command.Nome,
                 Sobrenome = command.Sobrenome,
                 Email = command.Email,

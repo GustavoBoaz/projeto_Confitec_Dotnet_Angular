@@ -12,6 +12,6 @@ namespace User.Core.src.Entities.Base
         protected BaseEntity() { }
 
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public string Id { get; private set; }
+        public string Id { get; set; }
     }
 }
